@@ -5,16 +5,16 @@ namespace P02ListGrowing;
 
 internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         var sarr = GetIntsWhileLineIsNotEmpty();
 
         Console.WriteLine(IsArrayAscending(sarr) ? "YES" : "NO");
     }
 
-    static bool IsArrayAscending(List<int> sarr)
+    private static bool IsArrayAscending(List<int> sarr)
     {
-        if (sarr.Count == 0) 
+        if (sarr.Count == 0)
             return false;
 
         int prev = sarr[0];
@@ -30,15 +30,6 @@ internal class Program
     }
 
     #region ConsoleCommons
-
-    private static int ReadInt32()
-    {
-        var line = Console.ReadLine();
-        if (line == null)
-            return 0;
-
-        return int.Parse(line);
-    }
 
     private static List<int> GetIntsWhileLineIsNotEmpty()
     {
@@ -56,5 +47,5 @@ internal class Program
         return sarr;
     }
 
-    #endregion
+    #endregion ConsoleCommons
 }
